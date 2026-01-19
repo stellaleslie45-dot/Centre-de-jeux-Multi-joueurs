@@ -45,3 +45,43 @@ def creer_profil():
     print(f"Profil '{nom}' créé avec succès !")
     return nouveau_profil
 
+def charger_profil():
+    print("\n--- CHARGEMENT DE PROFIL ---")
+    try:
+        fichiers = [f for f in os.listdir(donnees.DOSSIER_PROFILS) if f.endswith('.json')]
+    except FileNotFoundError:
+        print("Le dossier de profils n'existe pas encore.")
+        return None
+
+    if not fichiers:
+        print("Aucun profil existant. Veuillez en créer un.")
+        return None
+
+    print("Profils disponibles :")
+    for i, f in enumerate(fichiers, 1):
+        print(f"{i}. {f[:-5]}") 
+
+    while True:
+        choix = input("Choisissez le numéro de votre profil (ou 'q' pour quitter) : ")
+        if choix.lower() == 'q':
+            return None
+            
+        try:
+            index = int(choix) - 1
+            if 0 <= index < len(fichiers):
+                fichier_choisi = fichiers[index]
+                break
+            else:
+                print("Numéro invalide.")
+        except ValueError:
+            print("Veuillez entrer un chiffre.")
+
+    chemin_complet = os.path.join(donnees.DOSSIER_PROFILS, fichier_choisi)
+    try:
+        with open(chemin_complet, 'r', encoding='utf-8') as f:
+            profil = json.load(f)
+        print(f"Profil '{profil['nom']}' chargé ! Score actuel : {profil['score_total']}")
+        return profil
+    except (IOError, json.JSONDecodeError) as e:
+        print(f"Erreur : Le fichier de profil est corrompu ({e}).")
+        return None
