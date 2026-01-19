@@ -63,3 +63,14 @@ def lancer(profil):
             input("\nAppuyez sur Entrée...") # pause avant de quitter le jeu
             break
 
+
+        """ resumé simple
+        le jeu :
+           - propose 3 niveaux de difficulté
+           - génère un nombre aléatoire selon la difficulté
+           - demande à l'utilisateur de deviner le nombre 
+           - compte les essais
+           - calcule les points selon la difficulté et le nombre d essais
+           - met a jour le profil du joueur avec le score et la partie jouée 
+           - sauvegarde automatiquement
+             """
