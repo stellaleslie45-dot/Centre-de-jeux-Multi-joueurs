@@ -1,0 +1,17 @@
+{
+    "nom": "ceciia",
+    "date_creation": "2026-01-19 09:58:46",
+    "parties": [
+        {
+            "jeu": "Devinette",
+            "date": "2026-01-19 10:01",
+            "details": "Facile - 5 essais",
+            "score": 42
+        }
+    ],
+    "score_total": 42,
+    "succes": [
+        "Débutant",
+        "Première Victoire"
+    ]
+}

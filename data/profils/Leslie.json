@@ -1,0 +1,29 @@
+{
+    "nom": "Leslie",
+    "date_creation": "2026-01-18 12:33:28",
+    "parties": [
+        {
+            "jeu": "Calcul Mental",
+            "date": "2026-01-18 13:10",
+            "details": "30s - 4 justes",
+            "score": 40
+        },
+        {
+            "jeu": "Calcul Mental",
+            "date": "2026-01-19 11:04",
+            "details": "30s - 1 justes",
+            "score": 10
+        },
+        {
+            "jeu": "Calcul Mental",
+            "date": "2026-01-19 11:05",
+            "details": "30s - 9 justes",
+            "score": 90
+        }
+    ],
+    "score_total": 140,
+    "succes": [
+        "Débutant",
+        "Première Victoire"
+    ]
+}

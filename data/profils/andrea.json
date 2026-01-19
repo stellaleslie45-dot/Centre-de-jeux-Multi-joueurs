@@ -1,0 +1,24 @@
+{
+    "nom": "andrea",
+    "date_creation": "2026-01-19 10:22:53",
+    "parties": [
+        {
+            "jeu": "Calcul Mental",
+            "date": "2026-01-19 10:23",
+            "details": "30s - 6 justes",
+            "score": 60
+        },
+        {
+            "jeu": "Pendu",
+            "date": "2026-01-19 10:24",
+            "details": "Mot : AIGLE",
+            "score": 145
+        }
+    ],
+    "score_total": 205,
+    "succes": [
+        "Débutant",
+        "Première Victoire",
+        "Survivant"
+    ]
+}

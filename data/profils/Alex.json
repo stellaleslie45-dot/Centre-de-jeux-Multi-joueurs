@@ -1,0 +1,23 @@
+{
+    "nom": "Alex",
+    "date_creation": "2026-01-18 12:27:26",
+    "parties": [
+        {
+            "jeu": "Devinette",
+            "date": "2026-01-18 12:44",
+            "details": "Moyen - 16 essais",
+            "score": 70
+        },
+        {
+            "jeu": "Devinette",
+            "date": "2026-01-19 09:52",
+            "details": "Facile - 3 essais",
+            "score": 46
+        }
+    ],
+    "score_total": 116,
+    "succes": [
+        "Débutant",
+        "Première Victoire"
+    ]
+}

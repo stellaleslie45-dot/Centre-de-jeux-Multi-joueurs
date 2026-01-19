@@ -1,0 +1,17 @@
+{
+    "nom": "VALDO",
+    "date_creation": "2026-01-19 09:19:45",
+    "parties": [
+        {
+            "jeu": "Calcul Mental",
+            "date": "2026-01-19 09:41",
+            "details": "30s - 2 justes",
+            "score": 20
+        }
+    ],
+    "score_total": 20,
+    "succes": [
+        "Débutant",
+        "Première Victoire"
+    ]
+}
