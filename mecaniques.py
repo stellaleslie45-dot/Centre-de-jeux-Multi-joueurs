@@ -49,3 +49,30 @@ def verifier_succes(profil):
         return True
     return False
 
+def afficher_classements():
+    print("\n--- 🏆 CLASSEMENT GLOBAL (TOP 10) ---")
+    liste_joueurs = []
+    if not os.path.exists(donnees.DOSSIER_PROFILS):
+        print("Aucun profil trouvé.")
+        return
+
+    fichiers = [f for f in os.listdir(donnees.DOSSIER_PROFILS) if f.endswith('.json')]
+    for fichier in fichiers:
+        chemin = os.path.join(donnees.DOSSIER_PROFILS, fichier)
+        try:
+            with open(chemin, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                liste_joueurs.append( (data['nom'], data.get('score_total', 0)) )
+        except:
+            continue
+
+    liste_joueurs.sort(key=lambda x: x[1], reverse=True)
+    
+    print(f"{'RANG':<5} | {'NOM':<15} | {'SCORE':<10}")
+    print("-" * 35)
+    for i, joueur in enumerate(liste_joueurs[:10], 1):
+        nom, score = joueur
+        prefixe = "🥇 " if i == 1 else "🥈 " if i == 2 else "🥉 " if i == 3 else ""
+        print(f"{i:<5} | {prefixe}{nom:<13} | {score:<10}")
+    
+    input("\nAppuyez sur Entrée pour revenir au menu...")
