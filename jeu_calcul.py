@@ -61,7 +61,13 @@ def lancer( profil ): # profil est le dictionnaire du joueur actuel
     input("\nAppuyez sur Entrée...")
 
     """"""
-
+# Explications :
+# 1. Le jeu commence par un message d'accueil et attend que l'utilisateur appuie sur Entrée pour démarrer le chronomètre de 30 secondes.
+# 2. Une boucle principale génère des opérations mathématiques aléatoires (addition, soustraction, multiplication) et demande à l'utilisateur de répondre.
+# 3. Le jeu vérifie si la réponse est correcte et compte le nombre de bonnes réponses.
+# 4. Lorsque le temps est écoulé, le jeu calcule les points en fonction du nombre de bonnes réponses et met à jour le profil du joueur.
+# 5. Le profil est sauvegardé et les succès sont vérifiés.  
+    
 
 
 
