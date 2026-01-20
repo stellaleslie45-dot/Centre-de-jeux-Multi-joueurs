@@ -5,6 +5,25 @@ import gestion_profils  # module de gestion des profils
 import mecaniques  # mosule maison pour les points et les succès
 
 def lancer(profil):
+    """
+    Lance une partie du jeu 'Devine le Nombre'.
+
+    Cette fonction gère le déroulement complet d'une partie :
+    1. Demande au joueur de choisir une difficulté (Facile, Moyen, Difficile).
+    2. Génère un nombre aléatoire dans l'intervalle correspondant.
+    3. Boucle jusqu'à ce que le joueur trouve le nombre, en donnant des indices (plus grand/plus petit).
+    4. Calcule les points et met à jour le dictionnaire du profil (score et historique).
+    5. Sauvegarde automatiquement la progression et vérifie les succès.
+
+    Args:
+        profil (dict): Le dictionnaire représentant le profil du joueur actuel. 
+                       Ce dictionnaire est modifié sur place (ajout des points et de la partie).
+
+    Returns:
+        None
+    """
+    print("\n--- JEU : DEVINE LE NOMBRE ---")
+    # ... le reste de ton code ...
     print("\n--- JEU : DEVINE LE NOMBRE ---")
     print("1. Facile (1-50)")
     print("2. Moyen (1-100)")

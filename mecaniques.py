@@ -4,6 +4,25 @@ import os
 import json
 
 def calculer_points(jeu, difficulte, essais=0, temps=0):
+    
+    """
+    Calcule le nombre de points gagnés à la fin d'une partie.
+
+    La logique de calcul dépend du jeu :
+    - Devinette : Base de points selon difficulté (50/100/200) moins les essais supplémentaires.
+    - Calcul Mental : Nombre de bonnes réponses multiplié par 10.
+    - Pendu : Points par vie restante + bonus selon la longueur du mot.
+
+    Args:
+        jeu (str): Le nom du jeu ("devinette", "calcul", "pendu").
+        difficulte (int): Le niveau de difficulté (0 si non applicable).
+        essais (int, optional): Nombre d'essais ou d'erreurs, ou de bonnes réponses (selon le jeu). Défaut à 0.
+        temps (int, optional): Temps écoulé ou longueur du mot (pour le bonus Pendu). Défaut à 0.
+
+    Returns:
+        int: Le score final calculé (minimum 1 point pour la devinette si gagné, sinon peut être 0).
+    """
+    
     score = 0
     if jeu == "devinette":
         if difficulte == 1: base = 50

@@ -1,3 +1,11 @@
+"""
+Projet : Centre de Jeux Multi-joueurs
+Description : Application console permettant de jouer à 3 mini-jeux (Devinette, Calcul, Pendu),
+              de gérer des profils utilisateurs et de sauvegarder la progression.
+Auteurs : [Ton Prénom] & [Prénom de ta partenaire]
+Date : Janvier 2024
+"""
+
 # Fichier: main.py
 import gestion_profils
 import mecaniques
@@ -6,6 +14,25 @@ import jeu_calcul
 import jeu_pendu
 
 def menu_principal():
+    
+    """
+    Fonction principale : Point d'entrée et chef d'orchestre du programme.
+
+    Cette fonction gère la boucle infinie du menu principal. Elle est responsable de :
+    1. Afficher l'interface graphique (textuelle) et le statut du joueur actif.
+    2. Recueillir le choix de l'utilisateur.
+    3. Diriger l'utilisateur vers les bons modules (gestion_profils, jeux, mecaniques).
+    4. Vérifier qu'un profil est bien chargé avant de lancer un jeu.
+    5. Quitter proprement l'application.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    profil_actuel = None 
+    
     profil_actuel = None 
 
     while True:

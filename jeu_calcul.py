@@ -6,6 +6,26 @@ import gestion_profils   # module de gestion des profils
 import mecaniques   # calcul des points et succes
 
 def lancer( profil ): # profil est le dictionnaire du joueur actuel
+    
+    """
+    Lance une session chronométrée du jeu 'Calcul Mental'.
+
+    Le jeu dure 30 secondes. Durant ce temps, la fonction :
+    1. Génère des opérations aléatoires (+, -, *) et demande le résultat.
+    2. Vérifie les réponses et compte le nombre de bonnes réponses.
+    3. Arrête la boucle une fois le temps imparti écoulé.
+    4. Calcule le score final et met à jour le profil (ajout des points et entrée dans l'historique).
+    5. Sauvegarde les données et vérifie l'obtention de nouveaux succès.
+
+    Args:
+        profil (dict): Le dictionnaire du joueur actif. Il est modifié directement 
+                       pour y ajouter les points gagnés et l'historique de la partie.
+
+    Returns:
+        None
+    """
+    print("\n--- JEU : CALCUL MENTAL ---")
+    # ... le reste de ton code ...
     print("\n--- JEU : CALCUL MENTAL ---")
     input("Appuyez sur Entrée pour lancer le chrono (30s) ! ⏱️")
 
@@ -61,15 +81,6 @@ def lancer( profil ): # profil est le dictionnaire du joueur actuel
     input("\nAppuyez sur Entrée...")
 
     """"""
-# Explications :
-# 1. Le jeu commence par un message d'accueil et attend que l'utilisateur appuie sur Entrée pour démarrer le chronomètre de 30 secondes.
-# 2. Une boucle principale génère des opérations mathématiques aléatoires (addition, soustraction, multiplication) et demande à l'utilisateur de répondre.
-# 3. Le jeu vérifie si la réponse est correcte et compte le nombre de bonnes réponses.
-# 4. Lorsque le temps est écoulé, le jeu calcule les points en fonction du nombre de bonnes réponses et met à jour le profil du joueur.
-# 5. Le profil est sauvegardé et les succès sont vérifiés.  
-    
-
-
 
 
 

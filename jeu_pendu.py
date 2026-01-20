@@ -6,6 +6,27 @@ import gestion_profils
 import mecaniques
 
 def lancer(profil):
+    
+    """
+    Lance une partie complète du jeu du Pendu.
+
+    Le déroulement est le suivant :
+    1. Le joueur sélectionne un thème parmi ceux disponibles (ex: Informatique, Animaux).
+    2. Un mot est tiré au sort dans la liste correspondante.
+    3. Le joueur propose des lettres :
+       - Si correct : la lettre est révélée dans le mot.
+       - Si faux : le compteur d'erreurs augmente et le dessin du pendu progresse.
+    4. La partie s'arrête si le mot est trouvé (Victoire + Points + Sauvegarde) 
+       ou si le dessin est complet (Défaite + Révélation du mot).
+
+    Args:
+        profil (dict): Le dictionnaire du joueur actif. Il est modifié en cas de victoire 
+                       (ajout du score et de l'historique).
+
+    Returns:
+        None
+    """
+    
     print("\n--- JEU : LE PENDU ---")
     themes = list(donnees.MOTS_PAR_THEME.keys())
     for i, theme in enumerate(themes, 1):

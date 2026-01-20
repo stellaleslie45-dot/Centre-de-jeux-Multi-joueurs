@@ -5,6 +5,21 @@ from datetime import datetime
 import donnees 
 
 def sauvegarder(profil):
+    """
+    Sauvegarde les données du profil dans un fichier JSON dédié.
+
+    Le nom du fichier est généré automatiquement à partir du nom du joueur (ex: "Alex.json").
+    Cette fonction écrase le fichier existant avec les nouvelles données pour mettre à jour
+    la progression.
+
+    Args:
+        profil (dict): Le dictionnaire contenant toutes les informations du joueur
+                       (nom, score, historique, succès).
+
+    Returns:
+        None
+    """
+   
     nom_fichier = f"{profil['nom']}.json"
     chemin_complet = os.path.join(donnees.DOSSIER_PROFILS, nom_fichier)
 
@@ -15,6 +30,21 @@ def sauvegarder(profil):
         print(f"Erreur lors de la sauvegarde du profil : {e}")
 
 def creer_profil():
+   
+    """
+    Crée un nouveau profil joueur via une interface interactive.
+
+    Cette fonction :
+    1. Demande à l'utilisateur de choisir un pseudo (alphanumérique, min 3 caractères).
+    2. Vérifie que le pseudo n'existe pas déjà dans le dossier de sauvegarde.
+    3. Initialise la structure de données standard (score à 0, listes vides).
+    4. Sauvegarde immédiatement le nouveau profil sur le disque.
+
+    Returns:
+        dict: Le dictionnaire du nouveau profil créé.
+    """
+   
+   
     print("\n--- CRÉATION DE PROFIL ---")
     while True:
         nom = input("Entrez votre nom de joueur (lettres/chiffres seulement) : ").strip()
@@ -46,6 +76,18 @@ def creer_profil():
     return nouveau_profil
 
 def charger_profil():
+    """
+    Permet à l'utilisateur de sélectionner et charger un profil existant.
+
+    Cette fonction affiche la liste des fichiers .json trouvés dans le dossier
+    de sauvegarde et demande à l'utilisateur d'en choisir un par son numéro.
+    Elle gère les erreurs de lecture (fichier corrompu) et les dossiers vides.
+
+    Returns:
+        dict: Le dictionnaire du profil chargé si tout se passe bien.
+        None: Si l'utilisateur annule ('q'), s'il n'y a pas de profils,
+              ou si le fichier est corrompu.
+    """
     print("\n--- CHARGEMENT DE PROFIL ---")
     try:
         fichiers = [f for f in os.listdir(donnees.DOSSIER_PROFILS) if f.endswith('.json')]
