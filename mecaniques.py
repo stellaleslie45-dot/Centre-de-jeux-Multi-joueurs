@@ -1,9 +1,10 @@
 # Fichier: mecaniques.py
-import donnees
-import os
-import json
+import donnees 
+import os # pour la gestion des fichiers
+import json # pour lire/écrire les classements
 
 def calculer_points(jeu, difficulte, essais=0, temps=0):
+<<<<<<< HEAD
     
     """
     Calcule le nombre de points gagnés à la fin d'une partie.
@@ -24,13 +25,16 @@ def calculer_points(jeu, difficulte, essais=0, temps=0):
     """
     
     score = 0
+=======
+    score = 0 # score initial
+>>>>>>> d6a62e87e41364435143fce15243714f9068ddc6
     if jeu == "devinette":
         if difficulte == 1: base = 50
         elif difficulte == 2: base = 100
-        else: base = 200
-        malus = (essais - 1) * 2 
-        score = max(1, base - malus)
-    elif jeu == "calcul":
+        else: base = 200 # plus de points pour plus de difficulté
+        malus = (essais - 1) * 2 # pénalité par essai supplémentaire
+        score = max(1, base - malus) #Le score ne peut jamais être inférieur à 1
+    elif jeu == "calcul": 
         points_par_reponse = 10
         score = essais * points_par_reponse
     elif jeu == "pendu":
